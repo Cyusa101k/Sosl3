@@ -1,0 +1,311 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #ffffff;
+  font-weight: 400;
+}
+
+.app-content {
+  flex: 1;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 20px;
+  color: #ffffff;
+  background: #079c4a;
+  font-weight: 700;
+}
+
+.navbar-logo {
+  width: auto;
+  height: 48px;
+}
+
+.navbar-brand {
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-weight: 500;
+  list-style: none;
+}
+
+.navbar-links a,
+.navbar-button {
+  padding: 8px 0;
+  color: #ffffff;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover,
+.navbar-button:hover,
+.navbar-links .hover\:text-yellow-300:hover {
+  color: #fde047;
+}
+
+.dropdown-item {
+  position: relative;
+  margin-bottom: -10px;
+  padding-bottom: 10px;
+}
+
+.dropdown-arrow {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+.navbar-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 20;
+  width: 150px;
+  padding: 8px 0;
+  color: #ffffff;
+  background: #079c4a;
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.2);
+}
+
+.navbar-dropdown a {
+  display: block;
+  padding: 8px 14px;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.navbar-dropdown a:hover {
+  color: #ffffff;
+  background: #087f3e;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.page h1 {
+  margin-bottom: 12px;
+  color: #166534;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.page p {
+  color: #334155;
+  font-size: 18px;
+}
+
+.site-footer {
+  padding: 64px 48px 40px;
+  color: #ffffff;
+  background: #079c4a;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1fr;
+  gap: 72px;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding-bottom: 46px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.footer-column h2 {
+  margin: 0 0 20px;
+  color: #fff21d;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.footer-column p,
+.footer-column a {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.footer-column p {
+  margin: 0 0 14px;
+}
+
+.footer-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-column a {
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: #fde047;
+  background: transparent;
+}
+
+.footer-copy {
+  margin: 28px 0 0;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+a,
+.green {
+  color: #00bd7e;
+  padding: 3px;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: rgba(0, 189, 126, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  #app {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 12px 18px;
+  }
+
+  .navbar-dropdown {
+    right: auto;
+    left: 0;
+  }
+
+  .site-footer {
+    padding: 44px 24px 32px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 34px;
+  }
+
+  .footer-column h2 {
+    font-size: 22px;
+  }
+
+  .footer-column p,
+  .footer-column a,
+  .footer-copy {
+    font-size: 18px;
+  }
+}
