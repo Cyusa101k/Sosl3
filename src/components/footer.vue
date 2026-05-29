@@ -35,6 +35,6 @@
       </section>
     </div>
 
-    <p class="footer-copy">&copy; 2025 Visit Rwanda. All rights reserved.</p>
+    <p class="footer-copy">&copy; 2026 Visit Rwanda. All rights reserved.</p>
   </footer>
 </template>

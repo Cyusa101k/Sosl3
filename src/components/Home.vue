@@ -7,7 +7,7 @@
     >
     <div class="absolute inset-0 bg-slate-950/35"></div>
     <h1 class="relative z-10 text-center text-[42px] font-bold text-white drop-shadow-xl">
-      TEMBERA URWANDA PROJECT
+      WELCOME TO TEMBERA U RWANDA
     </h1>
   </main>
 </template>
